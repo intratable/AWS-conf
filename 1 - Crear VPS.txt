@@ -1,0 +1,36 @@
+Una vez ya registrado y iniciado sesion
+
+- Se dirige a Servicios y busca EC2 
+
+- En el catalogo de AMI busca la seccion de
+Red y Seguridad y 'Security Groups'.
+
+Crea un grupo de seguridad asignandole un 
+nombre, descripcion y agregando 2 reglas
+
+HTTP y SSH dejando los puertos por defecto
+y en Origen del HTTP especificar IPV4.
+
+- Se dirige a Instancias y da click en
+Lanzar Instacina lo redireccionara  a crear un VPS
+Le asigna un Nombre, deja la mayoria de cosas por 
+defecto para utilizar el plan FREE de 750hs aprox
+
+Lo unico que debe modificar es 
+
+Crear un par de claves y guardar el archivo .pem 
+para posteriormente utilizarlo...
+
+y en Configuraciones de Red selecciona el grupo de seguridad
+previamente creado.
+
+- Una vez ya creado el VPS antes de lanzarlo volver al 
+ catalogo de AMI en Red y Seguridad en 'Direcciones IP elásticas'
+
+Da click en Asignar la direccion IP elastica, tendran 1 por defecto
+del plan FREE, una ves creada la tildan y en ACCIONES buscan 
+Asociar la direcciones IP elásticas.
+
+el vps ya esta listo para ser lanzado...
+
+

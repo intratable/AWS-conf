@@ -1,0 +1,13 @@
+sudo nano /etc/needrestart/conf.d/
+	$nrconf{ucodehints} = 0;
+
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt-get install tasksel
+
+sudo tasksel
+	web server
+
+sudo apt -y install wget php php-cgi php-mysqli php-pear php-mbstring libapache2-mod-php php-common php-seclib php-mysql
+
+

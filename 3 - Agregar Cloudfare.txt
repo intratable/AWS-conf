@@ -1,0 +1,8 @@
+Registrarse y una ves iniciado sesion 
+
+
+Agregas tu DNS, seleccionas el Plan FREE 
+
+se dirigen a la seccion de DNS y apuntan a la IP del VPS
+
+y en el caso de tener DNS modificar los nameserver y agregan los de cloudfare

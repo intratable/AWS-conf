@@ -1,0 +1,42 @@
+Configurar redireccionamiento desde el puerto hacia el html en la carpeta...
+
+los contenedores, osea las carpetas van alojadas en el directorio}
+
+	/var/www
+
+cd /var/www
+sudo mkdir www.pagina.com
+sudo mkdir www.pagina.com/public_hmtl
+
+cd /etc/apache2/sites-available
+sudo touch www.pagina.com.conf
+
+sudo nano www.pagina.com.conf
+
+	<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName monsite.local.dev      - tu dns
+	ServerAlias monsite.local.dev     - tu dns
+	
+	DocumentRoot /var/www/html/public/monsite
+	<Directory />
+	Options FollowSymLinks
+	AllowOverride None
+	</Directory>
+	<Directory /var/www/html/public/monsite/>
+	Options Indexes FollowSymLinks MultiViews
+	AllowOverride All
+	Order allow,deny
+	allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/monsite-error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+	
+	CustomLog ${APACHE_LOG_DIR}/monsite-error.log COMBINED
+	</VirtualHost>
+
+sudo a2ensite www.pagina.com     Habilitar el virtualhost
